@@ -5,8 +5,9 @@ import { Typography, Box, Chip } from '@mui/material';
 import axios from 'axios';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
+import config from '../config';
 
-const API_URL = 'http://90.156.168.244:8000/api/v1';
+const API_URL = config().API_URL;
 
 const NotificationsPage = () => {
   const [transactions, setTransactions] = useState([]);

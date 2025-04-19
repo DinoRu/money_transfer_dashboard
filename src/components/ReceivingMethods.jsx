@@ -26,9 +26,10 @@ import axios from 'axios';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import config from '../config';
 // import { v4 as uuidv4 } from 'uuid';
 
-const API_URL = 'http://90.156.168.244:8000/api/v1';
+const API_URL = config().API_URL;
 
 const schema = yup.object().shape({
   type: yup.string().required('Le type est obligatoire'),

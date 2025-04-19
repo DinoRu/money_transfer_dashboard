@@ -29,8 +29,9 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useConfirm } from 'material-ui-confirm';
+import config from '../config';
 
-const API_URL = 'http://90.156.168.244:8000/api/v1';
+const API_URL = config().API_URL;
 
 const schema = yup
   .object()

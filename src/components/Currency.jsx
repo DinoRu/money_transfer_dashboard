@@ -22,8 +22,9 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import { useConfirm } from 'material-ui-confirm';
+import config from '../config';
 
-const API_URL = 'http://90.156.168.244:8000/api/v1';
+const API_URL = config().API_URL;
 
 const CurrenciesManagement = () => {
   const [currencies, setCurrencies] = useState([]);

@@ -11,8 +11,9 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import config from '../config';
 
-const API_URL = 'http://90.156.168.244:8000/api/v1/users/login';
+const API_URL = `${config().API_URL}/users/login`;
 
 const AdminLogin = () => {
   const [credentials, setCredentials] = useState({

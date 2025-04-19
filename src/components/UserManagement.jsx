@@ -17,8 +17,9 @@ import {
 } from '@mui/material';
 import { Delete, Edit, Refresh } from '@mui/icons-material';
 import axios from 'axios';
+import config from '../config';
 
-const API_URL = 'http://90.156.168.244:8000/api/v1';
+const API_URL = config().API_URL;
 
 const UserManagement = () => {
   const [users, setUsers] = useState([]);

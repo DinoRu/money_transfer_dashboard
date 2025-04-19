@@ -40,7 +40,7 @@ import { ConfirmProvider } from 'material-ui-confirm';
 
 // Composants
 import TransactionTable from './components/AdminDashboard';
-import ExchangeRates from './components/ExchangeRates';
+// import ExchangeRates from './components/ExchangeRates';
 import UserManagement from './components/UserManagement';
 import CountriesManagement from './components/CountriesPage';
 import ReceivingMethods from './components/ReceivingMethods';
@@ -87,11 +87,10 @@ function Navbar({ toggleTheme, mode }) {
     { path: '/transactions', label: 'Transactions' },
     { path: '/countries', label: 'Pays' },
     { path: '/currencies', label: 'Devises' },
-    { path: '/exchange-rates', label: 'Taux' },
+    { path: '/rates', label: 'Taux échanges' },
     { path: '/fees', label: 'Frais' },
     { path: '/receiving-methods', label: 'Réception' },
     { path: '/payment-methods', label: 'Paiement' },
-    { path: '/rates', label: 'Taux échanges' },
     { path: '/users', label: 'Utilisateurs' },
   ];
 
@@ -271,14 +270,14 @@ function App() {
                 <Route path="/transactions" element={<TransactionTable />} />
                 <Route path="/countries" element={<CountriesManagement />} />
                 <Route path="/currencies" element={<CurrencyManagement />} />
-                <Route path="/exchange-rates" element={<ExchangeRates />} />
+                <Route path="/rates" element={<Rates />} />
+                {/* <Route path="/exchange-rates" element={<ExchangeRates />} /> */}
                 <Route path="/fees" element={<FeesManagement />} />
                 <Route
                   path="/receiving-methods"
                   element={<ReceivingMethods />}
                 />
                 <Route path="/payment-methods" element={<PaymentMethods />} />
-                <Route path="/rates" element={<Rates />} />
                 <Route path="/users" element={<UserManagement />} />
                 <Route path="/" element={<TransactionTable />} />
                 <Route path="/notifications" element={<NotificationsPage />} />
